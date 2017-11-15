@@ -1,0 +1,66 @@
+
+// * Template
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+@require '../../Template/css/template'
+
+
+// * Carga modulos de Lesli CSS
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+@require Lesli--load('helper')
+
+
+// * Header
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+header
+	text-align center
+	background-color $color-gray-light
+	lesli-helper-center('vertical')
+	height 60vh
+
+	img
+		width 150px
+
+	hr
+		width 60%
+		height 1px
+		margin 1rem auto
+		background-color $color-blue-donis
+
+	h1
+		font-size 3.5rem
+		font-family $font-family-title-main
+
+	p
+		font-style italic
+
+
+// * Links
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+section
+	lesli-helper-center('vertical')
+	height 40vh
+
+	div
+
+		a
+			padding 1rem
+			border-radius 2px
+			background-color $color-blue-donis
+			border 1px solid $color-blue-donis
+			transition all linear 0.2s
+
+			&:not(:first-child)
+				margin-left 15px
+
+			img
+			span
+				vertical-align middle
+
+			img
+				width 50px
+
+			span
+				color $color-white
+
+			&:hover
+				box-shadow: 0px 0px 15px $color-blue-donis
