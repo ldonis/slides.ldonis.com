@@ -1,5 +1,6 @@
 
 module.exports = function (grunt) {
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -17,25 +18,12 @@ module.exports = function (grunt) {
             },
 
             ///* LesliCSS Framework - init file
-            LesliCSSIndex: {
+            LesliCSSIndex:{
                 expand: true,
                 flatten: true,
                 filter: 'isFile',
                 src: 'node_modules/leslicss/index.styl',
                 dest: 'Template/css/lesli/'
-            },
-
-            ///* Reveal framework
-            Reveal: {
-                files: [{
-                    expand: true, filter: 'isFile', flatten: true,
-                    src: ['node_modules/reveal.js/js/reveal.js'],
-                    dest: 'Template/js/'
-                },{
-                    expand: true, filter: 'isFile', flatten: true,
-                    src: ['node_modules/reveal.js/css/reveal.css'],
-                    dest: 'Template/css'
-                }]
             }
 
         },
@@ -46,30 +34,26 @@ module.exports = function (grunt) {
         ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
         stylus:{
             compile_only:{
-
                 options:{ 'include css': true, 'compress': false },
                 files: [{
-                    expand: true,
-                    cwd: './',
-                    src: ['**/css/*.styl'],
-                    dest: './',
-                    ext: '.css',
-                    extDot: 'first'
-                }],
-
+                    expand: true,   // Enable dynamic expansion.
+                    cwd: './',      // Src matches are relative to this path.
+                    src: ['**/css/*.styl', '!Template/**'], // Actual pattern(s) to match.
+                    dest: './',     // Destination path prefix.
+                    ext: '.css',    // Dest filepaths will have this extension.
+                    extDot: 'first' // Extensions in filenames begin after the first dot
+                }]
             },
             compile_minify:{
-
                 options:{ 'include css': true, 'compress': true },
                 files: [{
-                    expand: true,
-                    cwd: './',
-                    src: ['**/css/*.styl'],
-                    dest: './',
-                    ext: '.min.css',
-                    extDot: 'first'
-                }],
-
+                    expand: true,   // Enable dynamic expansion.
+                    cwd: './',      // Src matches are relative to this path.
+                    src: ['**/css/*.styl', '!Template/**'], // Actual pattern(s) to match.
+                    dest: './',     // Destination path prefix.
+                    ext: '.min.css',    // Dest filepaths will have this extension.
+                    extDot: 'first' // Extensions in filenames begin after the first dot
+                }]
             }
         },
 
@@ -98,7 +82,7 @@ module.exports = function (grunt) {
     ///* Defining Development tasks
     ///* ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
     grunt.registerTask('vendor', ['copy']);
-    grunt.registerTask('compile', ['stylus:compile_only']);
+    grunt.registerTask('compile',['stylus:compile_only']);
     grunt.registerTask('deploy', ['copy', 'stylus']);
 
 

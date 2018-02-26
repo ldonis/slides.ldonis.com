@@ -2,7 +2,7 @@
 
 // Website info 
 Config::set('info', [ 
-    'description' => 'Repositorio de slides, presentaciones y herramientas utilizadas en mis charlas y talleres', 
+    'description' => 'Slides for talks and workshops', 
     'name' => 'ldonis - slides', 
     'version' => '1.0', 
     'env' => 'dev'

@@ -6,6 +6,11 @@
 </header>
 <section>
 	<div>
+		<a href="<?php echo Html::url('mailchimp') ?>">
+			<?php echo Html::img('cloud-computing.png', ['alt'=>''], 'cloud-computing') ?>
+			<span>Mailchimp</span>
+		</a>
+		<!--
 		<a href="<?php echo Html::url('cloud-computing') ?>">
 			<?php echo Html::img('cloud-computing.png', ['alt'=>''], 'cloud-computing') ?>
 			<span>Cloud computing</span>
@@ -14,5 +19,6 @@
 			<?php echo Html::img('web-starter-kit.png', ['alt'=>''], 'web-starter-kit') ?>
 			<span>Web starter kit</span>
 		</a>
+		`-->
 	</div>
 </section>

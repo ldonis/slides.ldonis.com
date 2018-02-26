@@ -13,9 +13,9 @@
 // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 header
 	text-align center
-	background-color $color-gray-light
+	background-color lighten($color-gray, 11.5)
 	lesli-helper-center('vertical')
-	height 60vh
+	height 100vh
 
 	img
 		width 150px
@@ -24,7 +24,7 @@ header
 		width 60%
 		height 1px
 		margin 1rem auto
-		background-color $color-blue-donis
+		background-color $color-blue
 
 	h1
 		font-size 3.5rem
@@ -37,16 +37,20 @@ header
 // * Links
 // * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
 section
-	lesli-helper-center('vertical')
-	height 40vh
-
+	
 	div
+		display flex
+		padding 5rem 0
+		justify-content center
 
 		a
+			width 225px
 			padding 1rem
-			border-radius 2px
-			background-color $color-blue-donis
-			border 1px solid $color-blue-donis
+			text-align center
+			border-radius 3px
+			background-color $color-blue
+			border 1px solid $color-blue
+			text-shadow 0px -2px darken($color-blue, 5)
 			transition all linear 0.2s
 
 			&:not(:first-child)
@@ -63,4 +67,18 @@ section
 				color $color-white
 
 			&:hover
-				box-shadow: 0px 0px 15px $color-blue-donis
+				box-shadow 0px 0px 15px rgba($color-blue, .6)
+				
+
+
+// * Footer
+// * ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~  ~·~
+footer
+	text-align center
+	padding 2rem
+		
+	a
+		font-size .8rem
+
+	p
+		font-size .7rem

@@ -63,24 +63,48 @@ html,
 body {
   font-size: 1.2rem;
 }
-section.intro img {
-  width: 200px;
+header,
+section,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  height: 100vh;
+  margin: 0 auto;
 }
-section.arpanet {
-  background-color: rgba(255,255,255,0.7);
+header hr {
+  width: 80%;
+  margin-bottom: 0.8rem;
+  border-top-color: #3498db;
 }
-section.arpanet p {
-  padding: 0 2rem;
+#about h1 {
+  font-size: 4rem;
+  font-family: 'pinyon', 'roboto100', 'opensans300', sans-serif;
 }
-section.mosaic {
-  background-color: rgba(255,255,255,0.9);
+#about hr {
+  margin: 0px auto 10px;
 }
-section.browser img {
-  width: 100px;
+#about h2 {
+  font-size: 2rem;
+  font-family: 'roboto100', 'opensans300', sans-serif;
 }
-div.slide-background.arpanet {
-  background-image: url("../img/arpanet.jpg");
+footer h2 {
+  font-size: 3.5rem;
+  font-family: 'roboto100', 'opensans300', sans-serif;
 }
-div.slide-background.mosaic {
-  background-image: url("../img/mosaic.jpg");
+footer hr {
+  width: 75%;
+  margin: 10px auto;
+}
+hr {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 0;
+}
+header img {
+  width: 310px;
 }

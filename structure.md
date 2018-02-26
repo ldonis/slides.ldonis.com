@@ -1,3 +1,13 @@
+## Mail chimp  
+- Correo electronico
+* Que es
+* Como funciona
+* Seguridad
+- Mailchimp
+* Que es
+* Porque lo necesito
+* Como funciona
+---
 ## Cloud Computing 
 - Aplicaciones cliente-servidor
 - Que es Cloud Computing
