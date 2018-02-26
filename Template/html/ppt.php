@@ -13,11 +13,9 @@ if (ENV == 'live'){
 ?>
 </head>
 <body>
-<?php include $this->partial('header'); ?>
 <main>
 <?php include $content; ?>
 </main>
-<?php include $this->partial('footer'); ?>
 <?php echo HTML::js('slides', 'Template'); ?>
 </body>
 </html>

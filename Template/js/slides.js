@@ -145,13 +145,13 @@ document.onkeypress = function (e) {
 
     e = e || window.event;
 
-	if(e.key == "ArrowDown"){
+	if(e.key == "ArrowDown" || e.key == "ArrowRight"){
 
 		slideNext()
 
 	}
 
-	if(e.key == "ArrowUp"){
+	if(e.key == "ArrowUp" || e.key == "ArrowLeft"){
 
 		slidePrev()
 
