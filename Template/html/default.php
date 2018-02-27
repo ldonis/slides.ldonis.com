@@ -13,6 +13,7 @@ if (ENV == 'live'){
 ?>
 </head>
 <body>
-<?php include $content; ?>        
+<?php include $content; ?>
+<?php include $this->partial('analytics'); ?>
 </body>
 </html>

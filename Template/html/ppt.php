@@ -17,5 +17,6 @@ if (ENV == 'live'){
 <?php include $content; ?>
 </main>
 <?php echo HTML::js('slides', 'Template'); ?>
+<?php include $this->partial('analytics'); ?>
 </body>
 </html>
