@@ -89,6 +89,8 @@ function getSlides(){
 
 	let footer = document.getElementsByTagName("footer")[0]
 
+	let copy = document.getElementsByClassName("socialmedia")[0]
+
 	elements.push(header)
 
 	for (var section of sections) {
@@ -98,6 +100,8 @@ function getSlides(){
 	}
 
 	elements.push(footer)
+
+	elements.push(copy)
 
 }
 
@@ -141,7 +145,7 @@ getSlides()
 
 slideNext()
 
-document.onkeypress = function (e) {
+document.onkeydown  = function (e) {
 
     e = e || window.event;
 
@@ -159,3 +163,16 @@ document.onkeypress = function (e) {
 
 }
 
+
+var goTo = function(slide){
+
+	for(let i = 0; i < slide; i++){
+
+		slideNext();
+
+	}
+
+}
+
+
+goTo(5);

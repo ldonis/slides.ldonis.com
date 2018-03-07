@@ -97,11 +97,36 @@ header hr {
   margin-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
+#agenda h3:before {
+  content: "\0023";
+  padding-right: 5px;
+  color: #3498db;
+}
 #agenda ul li {
   margin-bottom: 3px;
 }
+#agenda ul li:before {
+  content: "\2219";
+  padding-right: 5px;
+  color: #777;
+}
 #agenda ul li ul {
-  padding-left: 50px;
+  padding-left: 40px;
+}
+#agenda ul li ul li:before {
+  content: "-";
+}
+section h3 {
+  font-size: 2.5rem;
+}
+section hr {
+  margin: 5px auto 10px;
+  width: 50%;
+}
+section p {
+  width: 90%;
+  margin: 5px auto;
+  max-width: 1200px;
 }
 footer h2 {
   font-size: 3.5rem;

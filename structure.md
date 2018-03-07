@@ -1,12 +1,15 @@
 ## Mail chimp  
-- Correo electronico
-* Que es
-* Como funciona
-* Seguridad
-- Mailchimp
-* Que es
-* Porque lo necesito
-* Como funciona
+* Correo electronico
+** Que es
+** Como funciona
+** Seguridad
+* Mailchimp
+** Que es
+** Porque lo necesito
+** Como funciona
+* Lista de suscriptores
+* Campañas
+
 ---
 ## Cloud Computing 
 - Aplicaciones cliente-servidor

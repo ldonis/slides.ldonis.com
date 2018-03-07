@@ -40,13 +40,38 @@ header
 		text-align center
 		margin-bottom 10px
 		border-bottom 1px solid $color-gray
-		
+		&:before
+			content "\0023"
+			padding-right 5px
+			color $color-blue
+	
 	ul
 		li
 			margin-bottom 3px
+			&:before
+				content "\2219"
+				padding-right 5px
+				color darken($color-gray, 40)
 			
 			ul
-				padding-left 50px
+				padding-left 40px
+				
+				li:before
+					content "-"
+
+section
+	h3
+		font-size 2.5rem
+	
+	hr
+		margin 5px auto 10px
+		width 50%
+		
+	p
+		width 90%
+		margin 5px auto
+		max-width 1200px
+
 
 footer
 
