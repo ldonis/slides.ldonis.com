@@ -32,7 +32,7 @@
 	<h3>¿Que es el correo electronico?</h3>
 	<hr>
 	<p>Es un sistema de intercambio de mensajes entre dispositivos electronicos.</p>
-	<p>En 1970 Ray Tomlinson creo la primera aplicacion paractica como parte del proyecto ARPANET en el instituto Tecnologico de Massachusetts.</p>
+	<p>En 1970 Ray Tomlinson creo la primera aplicacion practica como parte del proyecto ARPANET en el instituto Tecnologico de Massachusetts.</p>
 </section>
 
 <section>
@@ -44,7 +44,12 @@
 <section>
 	<h3>Seguridad</h3>
 	<hr>
-	
+	<p>Las direcciones de correo deben ser verificadas</p>
+	<p>No listas de spam</p>
+</section>
+
+<section>
+	<h3>DEMO</h3>
 </section>
 
 <?php include $this->partial('footer', 'Template'); ?>
