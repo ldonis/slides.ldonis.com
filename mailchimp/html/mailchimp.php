@@ -6,6 +6,10 @@
 
 <?php include $this->partial('header', 'Template'); ?>
 
+<section class="womensday">
+	
+</section>
+
 <section id="agenda">
 	<h3>Agenda</h3>
 	<ul>
