@@ -4,5 +4,9 @@
 <footer>
 	<h2>¡Gracias!</h2>
 	<hr>
-	<h3>ldonis@lesli.tech</h3>
+	<div class="socialmedia">
+		<a href="">fb.com/chambaguate</a>
+		<a href="">emc2@ldonis.com</a>
+		<a href="">fb.com/LesliTech</a>
+	</div>
 </footer>

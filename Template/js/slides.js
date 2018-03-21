@@ -173,3 +173,6 @@ var goTo = function(slide){
 	}
 
 }
+
+
+//goTo(11)

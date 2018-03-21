@@ -146,7 +146,8 @@ footer p.socialmedia span {
   margin: 0 20px;
 }
 div.socialmedia {
-  width: 100%;
+  width: 98%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   padding: 0 25px 25px;
@@ -169,4 +170,40 @@ header {
 header img {
   margin-bottom: 20px;
   width: 190px;
+}
+section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+section h3,
+section p {
+  text-shadow: 0px 0px 5px #fff;
+}
+section hr {
+  border-top: 1px solid #aaa;
+}
+section.about {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url("../img/section.about.jpg");
+}
+section.time {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../img/section.time.gif");
+}
+section.organization {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url("../img/section.organization.jpg");
+}
+section.gtd {
+  background-image: url("../img/section.gtd.svg");
+  background-size: contain;
+}
+section.gtd-organize ul li {
+  text-align: left;
+  list-style-type: circle;
+}
+section.gtd-evaluar {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url("../img/section.gtd-inbox.gif");
+}
+section.calendar {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url("../img/section.organization.jpg");
 }
