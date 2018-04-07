@@ -12,5 +12,8 @@
 		<a href="<?php echo Html::url('productivity') ?>">
 			<span>Productivity</span>
 		</a>
+		<a href="<?php echo Html::url('chatbot') ?>">
+			<span>Chatbots</span>
+		</a>		
 	</div>
 </section>

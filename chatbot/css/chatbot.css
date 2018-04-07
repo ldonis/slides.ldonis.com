@@ -1,0 +1,211 @@
+@font-face {
+  font-family: 'opensans300';
+  src: url("https://cdn.lesli.tech/assets/fonts/opensans/opensans-300.ttf") format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'roboto100';
+  src: url("https://cdn.lesli.tech/assets/fonts/roboto/roboto-100.woff") format('woff');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'pinyon';
+  src: url("https://cdn.lesli.tech/assets/fonts/pinyon/pinyon.woff") format('woff');
+  font-weight: 100;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+* {
+  font-family: 'opensans300', sans-serif;
+  color: #444;
+}
+html,
+body {
+  font-size: 1.2rem;
+}
+header,
+section,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+header hr {
+  width: 80%;
+  margin-bottom: 0.8rem;
+  border-top-color: #3498db;
+}
+#about h1 {
+  font-size: 4rem;
+  font-family: 'pinyon', 'roboto100', 'opensans300', sans-serif;
+}
+#about hr {
+  width: 80%;
+  margin: 0px auto 10px;
+}
+#about h2 {
+  font-size: 2rem;
+  font-family: 'roboto100', 'opensans300', sans-serif;
+}
+#agenda h3 {
+  width: 320px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+#agenda h3:before {
+  content: "\0023";
+  padding-right: 5px;
+  color: #3498db;
+}
+#agenda ul li {
+  margin-bottom: 3px;
+}
+#agenda ul li:before {
+  content: "\2219";
+  padding-right: 5px;
+  color: #777;
+}
+#agenda ul li ul {
+  padding-left: 40px;
+}
+#agenda ul li ul li:before {
+  content: "-";
+}
+section h3 {
+  font-size: 2.5rem;
+}
+section hr {
+  margin: 5px auto 10px;
+  width: 50%;
+}
+section p {
+  width: 90%;
+  margin: 5px auto;
+  max-width: 1200px;
+}
+footer h2 {
+  font-size: 3.5rem;
+  font-family: 'roboto100', 'opensans300', sans-serif;
+}
+footer hr {
+  width: 75%;
+  margin: 10px auto;
+}
+footer p.socialmedia {
+  margin-top: 25px;
+}
+footer p.socialmedia span {
+  margin: 0 20px;
+}
+div.socialmedia {
+  width: 98%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 25px;
+  font-size: 1.3rem;
+}
+hr {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 0;
+}
+header {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url("../img/chatbot.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header img {
+  margin-bottom: 20px;
+  width: 190px;
+}
+section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+section h3,
+section p {
+  text-shadow: 0px 0px 5px #fff;
+}
+section hr {
+  border-top: 1px solid #aaa;
+}
+section.chat .container {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #dcdcdc;
+}
+section.chat .container p {
+  width: 100%;
+  margin-bottom: 15px;
+}
+section.chat .container span {
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+section.chat .container .question {
+  text-align: right;
+}
+section.chat .container .question span {
+  background-color: #99c0ff;
+}
+section.chat .container .response {
+  text-align: left;
+}
+section.chat .container .response span {
+  background-color: #72ffbd;
+}

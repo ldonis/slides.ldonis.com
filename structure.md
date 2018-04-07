@@ -1,4 +1,53 @@
 
+## Chatbot
+* Que es un chatbot?  
+	Es un programa informatico el cual puede mantener una conversacon con un humano  
+		Dando respuestas u ofreciendo sugerencias  
+
+* Origen
+	1950 Alan Turing - Computing Machinery and Intelligence (propone test de turing)  
+	1966 Joseph Weizenbaum - publica ELIZA  
+		ELIZA (natural language processing computer program)  
+			creado en el MIT en el laboratorio de inteligencia artificial  
+			tenia un programa (conjunto de scripts con reglas) para simular un psicoterapista  
+	1994 Michael Mauldin - Creador de verbot (verbal bot)  
+		Michael fundador de Lycos (search engine)  
+		Verbot ya tiene un SDK
+* Para que puedo utilizar un chatbot?  
+	Soporte tecnico y atencion al cliente  
+	Gestion de pedidos (ventas)  
+	Envio o entrega de informacion a peticion  
+* Inteligencia artificial?  
+	No siempre,
+		primera version con emails
+			ejecutar x accion al recibir un email con ciertas caracteristicas
+			crear tarea con un email
+	Al aplicar AI
+		Lenguaje natural  
+			lengua o idioma hablado o escrito por humanos para propósitos generales de comunicación.
+			generadas espontáneamente en un grupo de hablantes con propósito de comunicarse
+		Empatia con el usuario  
+		Aprender
+* Como iniciar?
+	DialogFlow  
+		El nucleo cuenta con inteligencia artificial no validacion de ciclos  
+	JavaScript  
+* Demo  
+* DialogFlow 
+	Historia
+		conocida como api.ai
+		fundada en 2010
+		comprada por google en 2016
+	funcionamiento
+		Agentes  
+		Intentos  
+		Contextos  
+		Small talk  
+		action
+			funcion o clase que se ejecuta
+		webhooks
+
+
 ## Productividad  
 El tiempo no se puede administrar
 	no se puede mover las 8 am a la tarde
@@ -50,8 +99,8 @@ El tiempo no se puede administrar
 		analizar que he echo bien
 	Tips
 		Planificar por trimestre
-			ingresos y gastos
-			proyectos
+			ingresos y gasto
+s			proyectos
 			vacaciones 
 			Objetivos realistas
 				dividir grandes metas en peque;as metas alcanzables a corto plazo
