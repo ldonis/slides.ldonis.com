@@ -89,8 +89,6 @@ function getSlides(){
 
 	let footer = document.getElementsByTagName("footer")[0]
 
-	let copy = document.getElementsByClassName("socialmedia")[0]
-
 	elements.push(header)
 
 	for (var section of sections) {
@@ -100,8 +98,6 @@ function getSlides(){
 	}
 
 	elements.push(footer)
-
-	elements.push(copy)
 
 }
 

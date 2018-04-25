@@ -100,12 +100,36 @@ div.socialmedia
 	padding 0 25px 25px
 	font-size 1.3rem
 	
-	
 
-
+/*
+* Helpers
+*/
 hr
 	width 100%
 	display block
 	margin 0 auto
 	border-top 1px solid $color-gray
 	border-bottom 0
+
+a
+	text-decoration underline
+
+
+.center
+	text-align center
+	
+
+.list-simple
+	
+	li
+		&:before
+			content "\2219"
+			
+		ul
+			padding-left 40px
+			
+			li
+				font-size .9rem
+
+			li:before
+				content "\2218"

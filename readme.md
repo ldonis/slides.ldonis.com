@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.ldonis.com" target="_blank">
-    <img alt="ldonis logo" src="https://cdn.lesli.tech/assets/logos/ldonis/ldonis-logo.svg" width="150px" />
+    <img alt="ldonis logo" src="https://cdn.lesli.tech/assets/logos/ldonis/ldonis-logo.svg" width="125px" />
   </a>
 </p>
 
@@ -8,5 +8,10 @@
 
 <hr/>
 
-#### This page is available under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/legalcode) 
-#### [Luis Donis](https://www.ldonis.com) [Guatemala](http://www.visitguatemala.com/) 2017   
+#### License
+---
+
+This work is licensed under a [Creative Commons Attribution 4.0
+International license](https://creativecommons.org/licenses/by/4.0/).
+
+[Luis Donis](https://www.ldonis.com) Guatemala 2018

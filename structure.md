@@ -3,7 +3,6 @@
 * Que es un chatbot?  
 	Es un programa informatico el cual puede mantener una conversacon con un humano  
 		Dando respuestas u ofreciendo sugerencias  
-
 * Origen
 	1950 Alan Turing - Computing Machinery and Intelligence (propone test de turing)  
 	1966 Joseph Weizenbaum - publica ELIZA  

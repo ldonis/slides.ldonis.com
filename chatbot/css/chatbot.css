@@ -160,6 +160,24 @@ hr {
   border-top: 1px solid #ddd;
   border-bottom: 0;
 }
+a {
+  text-decoration: underline;
+}
+.center {
+  text-align: center;
+}
+.list-simple li:before {
+  content: "\2219";
+}
+.list-simple li ul {
+  padding-left: 40px;
+}
+.list-simple li ul li {
+  font-size: 0.9rem;
+}
+.list-simple li ul li:before {
+  content: "\2218";
+}
 header {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url("../img/chatbot.jpg");
   background-repeat: no-repeat;
