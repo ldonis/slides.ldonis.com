@@ -1,21 +1,14 @@
 {
     "name": "slides.ldonis.com",
-    "title": "",
+    "title": "Slides for talks & workshops",
     "homepage": "https://slides.ldonis.com",
-    "author": "Luis Gdonis <emc2@ldonis.com>",
-    "license": "CC-BY-4.0",
+    "author": "Luis Donis <emc2@ldonis.com>",
+    "license": "Proprietary",
+    "dependencies": {},
     "devDependencies": {
-        "grunt": "^1",
-        "grunt-cli": "^1.2.0",
-        "grunt-contrib-copy": "^1",
-        "grunt-contrib-stylus": "^1",
-        "grunt-contrib-watch": "^1",
-        "leslicss": "https://github.com/LesliTech/LesliCSS.git#master"
+        "leslicss": "git+https://github.com/LesliTech/LesliCSS.git#master"
     },
     "scripts": {
-        "vendor": "grunt vendor",
-        "compile": "grunt compile",
-        "dev": "grunt watch",
-        "deploy": "grunt deploy"
+
     }
 }

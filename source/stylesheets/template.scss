@@ -1,0 +1,45 @@
+/*
+* ldonis.com - Slides for talks & workshops
+*
+*
+* @author   Luis Donis <emc2@ldonis.com>
+* @license  
+* @version  1.0.0
+* @link     https://slides.ldonis.com
+*/
+
+
+// · Including Lesli CSS
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@import '../../node_modules/leslicss/lesli';
+
+
+// · Including variables
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@import 'variables.scss';
+
+
+// · Fonts
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+// · https://fonts.google.com/specimen/Pinyon+Script?selection.family=Montserrat:300,400|Pinyon+Script
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Pinyon+Script');
+
+
+// · Global dom styles
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@include lesli-base();
+
+* {
+    outline: none;
+    color: $color-black;
+    font-family: $font-family-body;
+    font-weight: $font-weight-normal;
+}
+
+html,
+body {
+    color: $color-black;
+    font-family: $font-family-body;
+    font-weight: $font-weight-normal;
+    font-size: 16px;
+}

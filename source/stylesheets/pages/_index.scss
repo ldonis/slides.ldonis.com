@@ -1,0 +1,73 @@
+/*
+* ldonis.com - Slides for talks & workshops
+*
+*
+* @author   Luis Donis <emc2@ldonis.com>
+* @license  
+* @version  1.0.0
+* @link     https://slides.ldonis.com
+*/
+
+// · Header
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+header {
+    @include lesli-flex-center('vertical');
+    text-align: center;
+    height: 100vh;
+
+    h1 {
+        font-size: 3.8rem;
+        font-family: $font-family-ldonis;
+    }
+
+    p {
+        font-size: 1.4rem;
+        font-size: italic;
+    }
+
+}
+
+
+// · Links to slides
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+section {
+    padding: 6rem 0 4rem;
+    text-align: center;
+    background-color: rgb(250, 240, 240);
+
+    img {
+        width: 100px;
+    }
+
+    hr {
+        width: 60%;
+        height: 1px;
+        border: none;
+        margin: 1rem auto;
+        background-color: $color-blue;
+    }
+    
+    div {
+        display: flex;
+        padding: 5rem 0;
+        justify-content: center;
+
+        a {
+			width: 225px;
+			padding: 1rem;
+			text-align: center;
+			border-radius: 3px;            
+            background-color: #fefefe;
+            background-image: linear-gradient(to bottom,#fefefe 0%,#f4f4f4 100%);
+            border: 1px solid rgb(205, 205, 205);
+            transition: all linear .2s;
+
+            &:hover span {
+                color: $color-blue;
+            }
+
+        }
+
+    }
+
+}
