@@ -10,7 +10,7 @@
 
 // · Header
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-header {
+header.index {
     @include lesli-flex-center('vertical');
     text-align: center;
     height: 100vh;
@@ -30,7 +30,7 @@ header {
 
 // · Links to slides
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-section {
+section.index {
     padding: 6rem 0 4rem;
     text-align: center;
     background-color: rgb(250, 240, 240);

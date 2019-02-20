@@ -1,0 +1,119 @@
+/*
+* ldonis.com - Slides for talks & workshops
+*
+*
+* @author   Luis Donis <emc2@ldonis.com>
+* @license  
+* @version  1.0.0
+* @link     https://slides.ldonis.com
+*/
+
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+// · Template
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@import 'template.scss';
+
+
+// · Slides thanks to https://www.chenhuijing.com/blog/html-slides-without-frameworks/
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+.slides {
+
+    #start {
+        h1 {
+            font-weight: 100;
+            font-size: 2rem;
+        }
+
+        hr {
+            width: 50%;
+            border:none;
+            height: 20px;
+            height: 50px;
+            margin-top: 0;
+            border-bottom: 1px solid rgb(210, 210, 210);
+            box-shadow: 0 20px 20px -20px rgb(210, 210, 210);
+            margin: -50px auto 10px; 
+        }
+
+    }
+
+    #start,
+    section[id^=slide] {
+        @include lesli-flex-center('vertical');
+        transition: transform 1s, opacity 0.8s;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 0;        
+        
+        &:target {
+            transform: rotate(0deg);
+            z-index: 1;
+        }
+        
+        &:target ~ [id^=slide] {
+            opacity: 0;
+            transform: rotate(-90deg);
+        }
+
+    }
+
+    div.control,
+    div.controls {
+        position: absolute;
+        bottom: 10px;
+        a {
+            width: 40px;
+            height: 40px;
+            border-radius: 2px;
+            display: inline-block;
+            background-size: 20px;
+            background-color: #fefefe;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid silver;
+        }
+    }
+
+    div.control {
+        bottom: 14px;
+        a {
+            width: initial;
+            height: initial;
+            padding: 5px 10px;
+        }
+    }
+
+    div.controls {
+
+        a {
+
+            &:first-child {
+                background-image: 
+                    url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg>'),
+                    linear-gradient(to bottom,#fefefe 0%,#f4f4f4 100%);
+            }
+
+            &:last-child {
+                background-image: 
+                    url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>'),
+                    linear-gradient(to bottom,#fefefe 0%,#f4f4f4 100%);
+            }
+
+        }
+
+    }
+
+}
+
+
+// · Slides
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@import 'slides/cloud-iot.scss';

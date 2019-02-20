@@ -1,0 +1,28 @@
+/*
+* ldonis.com - Slides for talks & workshops
+*
+*
+* @author   Luis Donis <emc2@ldonis.com>
+* @license  
+* @version  1.0.0
+* @link     https://slides.ldonis.com
+*/
+
+body.cloud-iot {
+
+    #start {
+        background-color: transparent;
+        background-image: 
+            linear-gradient(to bottom, rgba(255,255,255,.8), rgba(255,255,255,.8)),
+            url('https://www.lesli.tech/www/home/assets/img/header-bg.svg');
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        img {
+            width: 200px;
+        }
+
+    }
+
+}
