@@ -19,7 +19,17 @@
         </script>
         <script>
 
-            function getSlides(){
+            (() => {
+
+                if (location.hash != "#slide0") {
+                    location.href = "#slide0"
+                    location.reload()
+                    return
+                }
+
+                var slide = -1
+
+                let elements = []
 
                 // getting elements to navigate
                 let sections = document.getElementsByTagName("section")
@@ -34,128 +44,45 @@
                 // adding identifier to slides
                 elements.map((element, index) => {
 
-                    // navigation controls container
-                    let controls = document.createElement('div')
+                    let index_next = index + 1
+                    let index_prev = index - 1
 
-                    // controls for content slides
-                    if (index > 0) {
-                        
-                        let next = document.createElement('a')
-                        let prev = document.createElement('a')
-
-                        // adding style class to container
-                        controls.classList.add('controls')
-                        
-                        next.href = "#slide" + (index + 1)
-                        prev.href = "#slide" + (index - 1)
-
-                        // pushing buttons to container
-                        controls.appendChild(prev)
-                        controls.appendChild(next)    
-
+                    if (index_prev < 0) {
+                        index_prev = elements.length - 1
                     }
 
-                    // controls for first slide
-                    if (index == 0) {
-
-                        // adding style class to container
-                        controls.classList.add('control')
-
-                        // start button
-                        let start = document.createElement('a')
-                        
-                        start.href = "#slide1"
-                        start.innerText = "start"
-
-                        controls.appendChild(start)
-
+                    if (index_next == elements.length) {
+                        index_next = 0
                     }
-
-                    element.appendChild(controls)
 
                     element.setAttribute("id", "slide" + index)
-                    
+                    element.setAttribute("slide-next", "slide" + index_next)
+                    element.setAttribute("slide-prev", "slide" + index_prev)
 
                 })
 
-            }
+                document.onkeydown  = function (e) {
 
-            function slideNext(){
+                    let id = (location.hash).substring(1)
+                    let slide = document.getElementById(id)
 
-                slide++
+                    e = e || window.event;
 
-                if(slide >= elements.length){
+                    if(e.key == "ArrowDown" || e.key == "ArrowRight"){
 
-                    slide = 0		
+                        location.href = '#'+slide.attributes['slide-next'].value;
 
-                }
+                    }
 
-                let element = elements[slide]
+                    if(e.key == "ArrowUp" || e.key == "ArrowLeft"){
 
-                let controls = element.getElementsByClassName('control')
-                if (controls.length == 0) { 
-                    controls = element.getElementsByClassName('controls') 
-                    controls = controls[0].childNodes[1]
-                }else{
-                    controls = controls[0].childNodes[0]
-                }
+                        location.href = '#'+slide.attributes['slide-prev'].value;
 
-                location.href = controls.attributes.href.value;
-
-            }
-
-            function slidePrev(){
-
-                slide--
-
-                if(slide >= elements.length){
-
-		            slide = (elements.length - 1)
+                    }
 
                 }
 
-                let element = elements[slide]
-
-                let controls = element.getElementsByClassName('control')
-                if (controls.length == 0) { 
-                    controls = element.getElementsByClassName('controls') 
-                    controls = controls[0].childNodes[0]
-                }else{
-                    controls = controls[0].childNodes[0]
-                }
-
-                location.href = controls.attributes.href.value;
-
-            }
-
-            var slide = -1
-
-            var elements = []
-
-            getSlides()
-
-            if (location.hash != "#slide0") {
-                location.href = "#slide0"
-                location.reload()
-            }
-
-            document.onkeydown  = function (e) {
-
-                e = e || window.event;
-
-                if(e.key == "ArrowDown" || e.key == "ArrowRight"){
-
-                    slideNext()
-
-                }
-
-                if(e.key == "ArrowUp" || e.key == "ArrowLeft"){
-
-                    slidePrev()
-
-                }
-
-            }
+            })()
             
         </script>
     </body>
