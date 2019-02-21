@@ -23,12 +23,60 @@ html {
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 .slides {
 
-    #start {
+    // header
+    #slide0 {
+
         h1 {
             font-weight: 100;
             font-size: 2rem;
         }
 
+    }
+
+    // about
+    #slide1 {
+
+        img {
+            width: 90px;
+            margin-bottom: .2rem;
+        }
+
+        h1 {
+            font-weight: 100;
+            font-size: 2.2rem;
+        }
+
+    }
+
+    section:last-child {
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 100;
+        }
+        
+    }
+
+    div.socialmedia{
+        width: 98%;
+        display: flex;
+        max-width: 1000px;
+        font-size: 1.3rem;
+        padding: 0 25px 25px;
+        justify-content: space-between;
+    }
+	
+
+    // slides
+    [id^=slide] {
+        @include lesli-flex-center('vertical');
+        transition: transform 1s, opacity 0.8s;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 0;        
         hr {
             width: 50%;
             border:none;
@@ -39,20 +87,6 @@ html {
             box-shadow: 0 20px 20px -20px rgb(210, 210, 210);
             margin: -50px auto 10px; 
         }
-
-    }
-
-    #start,
-    section[id^=slide] {
-        @include lesli-flex-center('vertical');
-        transition: transform 1s, opacity 0.8s;
-        transform: rotate(90deg);
-        transform-origin: 0 0;
-        position: absolute;
-        height: 100vh;
-        width: 100%;
-        z-index: 0;        
-        
         &:target {
             transform: rotate(0deg);
             z-index: 1;

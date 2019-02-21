@@ -17,5 +17,146 @@
             gtag('js', new Date());
             gtag('config', 'UA-92569549-3');
         </script>
+        <script>
+
+            function getSlides(){
+
+                // getting elements to navigate
+                let sections = document.getElementsByTagName("section")
+
+                // creating collection of navigable elements
+                for (var section of sections) {
+
+                    elements.push(section)
+
+                }
+
+                // adding identifier to slides
+                elements.map((element, index) => {
+
+                    // navigation controls container
+                    let controls = document.createElement('div')
+
+                    // controls for content slides
+                    if (index > 0) {
+                        
+                        let next = document.createElement('a')
+                        let prev = document.createElement('a')
+
+                        // adding style class to container
+                        controls.classList.add('controls')
+                        
+                        next.href = "#slide" + (index + 1)
+                        prev.href = "#slide" + (index - 1)
+
+                        // pushing buttons to container
+                        controls.appendChild(prev)
+                        controls.appendChild(next)    
+
+                    }
+
+                    // controls for first slide
+                    if (index == 0) {
+
+                        // adding style class to container
+                        controls.classList.add('control')
+
+                        // start button
+                        let start = document.createElement('a')
+                        
+                        start.href = "#slide1"
+                        start.innerText = "start"
+
+                        controls.appendChild(start)
+
+                    }
+
+                    element.appendChild(controls)
+
+                    element.setAttribute("id", "slide" + index)
+                    
+
+                })
+
+            }
+
+            function slideNext(){
+
+                slide++
+
+                if(slide >= elements.length){
+
+                    slide = 0		
+
+                }
+
+                let element = elements[slide]
+
+                let controls = element.getElementsByClassName('control')
+                if (controls.length == 0) { 
+                    controls = element.getElementsByClassName('controls') 
+                    controls = controls[0].childNodes[1]
+                }else{
+                    controls = controls[0].childNodes[0]
+                }
+
+                location.href = controls.attributes.href.value;
+
+            }
+
+            function slidePrev(){
+
+                slide--
+
+                if(slide >= elements.length){
+
+		            slide = (elements.length - 1)
+
+                }
+
+                let element = elements[slide]
+
+                let controls = element.getElementsByClassName('control')
+                if (controls.length == 0) { 
+                    controls = element.getElementsByClassName('controls') 
+                    controls = controls[0].childNodes[0]
+                }else{
+                    controls = controls[0].childNodes[0]
+                }
+
+                location.href = controls.attributes.href.value;
+
+            }
+
+            var slide = -1
+
+            var elements = []
+
+            getSlides()
+
+            if (location.hash != "#slide0") {
+                location.href = "#slide0"
+                location.reload()
+            }
+
+            document.onkeydown  = function (e) {
+
+                e = e || window.event;
+
+                if(e.key == "ArrowDown" || e.key == "ArrowRight"){
+
+                    slideNext()
+
+                }
+
+                if(e.key == "ArrowUp" || e.key == "ArrowLeft"){
+
+                    slidePrev()
+
+                }
+
+            }
+            
+        </script>
     </body>
 </html>
