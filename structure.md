@@ -1,3 +1,40 @@
+#### Cloud Infraestructure for IoT
+---
+* Cloud Computing 
+	* Proveedores
+	* Servidores Privados Virtuales
+	* Infraestructure as a Service (IaaS)
+	* Software as a Service (SaaS)
+	* SSH, FTP, SCP
+  
+* IoT
+	* Captura/almacenamiento de datos (sensores)
+	* Presentacion de datos a usuarios
+	* Ejecutar una accion
+  
+* Cloud Computing & IoT
+	* Conversion de protocolos
+	* MQTT
+		* subscription/publish
+		* database
+		* alerts
+	* HTTP
+		* authentication
+		* database
+		* log
+		* management
+	* WS (MQTT for web browsers)
+	* Integrations
+		* MongoDB
+		* Mailgun (SMTP)
+		* CloudMQTT
+ 
+* How To
+	* NodeJS
+	* Mosca
+	* Express
+	* NGINX
+
 
 ## Chatbot
 * Que es un chatbot?  
@@ -159,11 +196,6 @@ s			proyectos
 			- keepass
 			- lasspass
 			- 1password
-
-
-
-
-
 
 ## Mail chimp  
 * Correo electronico
