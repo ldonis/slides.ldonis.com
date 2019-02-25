@@ -3,7 +3,7 @@
     "title": "Slides for talks & workshops",
     "homepage": "https://slides.ldonis.com",
     "author": "Luis Donis <emc2@ldonis.com>",
-    "license": "Proprietary",
+    "license": "CC BY 4.0",
     "dependencies": {},
     "devDependencies": {
         "leslicss": "git+https://github.com/LesliTech/LesliCSS.git#master"
