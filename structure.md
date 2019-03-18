@@ -1,16 +1,23 @@
 #### Cloud Infraestructure for IoT
 ---
 * Cloud Computing 
+	Práctica de utilizar una red de servidores remotos alojados en Internet para almacenar, administrar y procesar datos, en lugar de un servidor local o una computadora personal.
 	* Proveedores
+		* amazon
+		* digital ocean
+		* azure, google...
 	* Servidores Privados Virtuales
 	* Infraestructure as a Service (IaaS)
 	* Software as a Service (SaaS)
-	* SSH, FTP, SCP
+	* Communication
+		* SSH, FTP, SCP
   
 * IoT
-	* Captura/almacenamiento de datos (sensores)
-	* Presentacion de datos a usuarios
-	* Ejecutar una accion
+	La interconexión a través de internet de dispositivos informáticos integrados en objetos cotidianos, lo que les permite enviar y recibir datos.
+	* Objetivos
+		* Captura/almacenamiento de datos (sensores)
+		* Presentacion de datos a usuarios
+		* Ejecutar una accion
   
 * Cloud Computing & IoT
 	* Conversion de protocolos
@@ -28,12 +35,20 @@
 		* MongoDB
 		* Mailgun (SMTP)
 		* CloudMQTT
- 
+* Integrations
+	* MongoDB
+	* SMTP
+	* CloudMQTT
+	* Firebase
+	* AWS - SES/SNS/S3
 * How To
 	* NodeJS
 	* Mosca
 	* Express
 	* NGINX
+
+
+
 
 
 ## Chatbot

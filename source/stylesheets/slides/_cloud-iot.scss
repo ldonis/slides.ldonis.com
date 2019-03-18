@@ -20,9 +20,40 @@ body.cloud-iot {
         background-size: cover;
 
         img {
-            width: 200px;
+            width: 180px;
         }
 
+    }
+
+    section {
+        position: relative;
+        video {
+            width: 90%;
+            height: 90%;
+            z-index: -999;
+            position: absolute;
+        }
+        article {
+            background-color: rgba(255, 255, 255, .7);
+            @include lesli-flex-center('vertical');
+            height: 100vh;
+            width: 100%;
+            z-index: 999;
+            &.bg-5{
+                background-color: rgba(255, 255, 255, .5);
+            }
+        }
+        h1, p, li{
+            color: rgb(0,0,0);
+            text-shadow: 0px 0px 6px #FFFFFF;
+        }
+    }
+
+    section.iot {
+        img{
+            width: 96%;
+            max-width: 800px;
+        }
     }
 
 }
