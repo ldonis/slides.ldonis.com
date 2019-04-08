@@ -62,6 +62,10 @@ section.index {
             border: 1px solid rgb(205, 205, 205);
             transition: all linear .2s;
 
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+
             &:hover span {
                 color: $color-blue;
             }

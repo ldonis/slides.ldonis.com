@@ -9,6 +9,7 @@
         "leslicss": "git+https://github.com/LesliTech/LesliCSS.git#master"
     },
     "scripts": {
-
+        "build": "bundle exec middleman build",
+        "serve": "bundle exec middleman serve"
     }
 }

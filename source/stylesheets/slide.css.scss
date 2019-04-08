@@ -54,6 +54,7 @@ html {
 
     // generic slide
     section {
+        position: relative;
         text-align: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -67,6 +68,28 @@ html {
             font-size: 1.8rem;
         }
 
+        // video background
+        img.gif-bg, 
+        video {
+            width: auto;
+            height: 96%;
+            z-index: -999;
+            position: absolute;
+        }
+        article {
+            background-color: rgba(255, 255, 255, .7);
+            @include lesli-flex-center('vertical');
+            height: 100vh;
+            width: 100%;
+            z-index: 999;
+            h1, p, li{
+                color: rgb(0,0,0);
+                text-shadow: 0px 0px 6px #FFFFFF;
+            }
+            &.bg-5{
+                background-color: rgba(255, 255, 255, .5);
+            }
+        }
 
         // useful classes
         .text-shadow-white {
@@ -127,3 +150,4 @@ html {
 // · Slides
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 @import 'slides/cloud-iot.scss';
+@import 'slides/software-development-roadmap.scss';
