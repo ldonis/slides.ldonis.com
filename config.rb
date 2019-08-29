@@ -13,7 +13,7 @@ activate :directory_indexes
 activate :deploy do |deploy|
     deploy.deploy_method = :git
     deploy.build_before = true
-    deploy.branch = 'gh-pages'
+    deploy.branch = 'production'
 end
 
 configure :build do

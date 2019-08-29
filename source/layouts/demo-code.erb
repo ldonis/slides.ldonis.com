@@ -5,11 +5,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>ldonis &bull; slides for talks &amp; workshops</title>
-    <%= stylesheet_link_tag "slides" %>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <%= stylesheet_link_tag "demo-code" %>
 </head>
 <body class="<%= page_classes %>">
     <%= yield %>
-    <%= partial "partials/slides" %>
     <%= partial "partials/analytics" %>
 </body>
 </html>

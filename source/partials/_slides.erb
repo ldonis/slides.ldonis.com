@@ -1,28 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
+<script>
 
+(() => {
     if (location.hash != "#slide0") {
         location.href = "#slide0"
         location.reload()
         return
     }
 
-    var elements = []
-
+    var slide = -1
+    let elements = []
+    
     // getting elements to navigate
-    var sections = document.getElementsByTagName("section")
-
+    let sections = document.getElementsByTagName("section")
+    
     // creating collection of navigable elements
-    for (var section in sections) {
-
+    for (var section of sections) {
         elements.push(section)
-
     }
+    
+    // adding identifier to slides
+    elements.map((element, index) => {
 
-    // adding identifier to slide elements (sections)
-    elements.map(function(element, index) {
-
-        var index_next = index + 1
-        var index_prev = index - 1
+        let index_next = index + 1
+        let index_prev = index - 1
 
         if (index_prev < 0) {
             index_prev = elements.length - 1
@@ -35,13 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
         element.setAttribute("id", "slide" + index)
         element.setAttribute("slide-next", "slide" + index_next)
         element.setAttribute("slide-prev", "slide" + index_prev)
-
+        
     })
 
-    document.onkeydown = function(e) {
+    document.onkeydown  = function (e) {
 
-        var id = (location.hash).substring(1)
-        var slide = document.getElementById(id)
+        let id = (location.hash).substring(1)
+        let slide = document.getElementById(id)
 
         e = e || window.event;
 
@@ -59,14 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    /*
-    document.getElementsByTagName("section").forEach(section => {
-        
-        section.addEventListener("click", () => {
-            console.log("click")
-        })
+})()
 
-    })
-    */
-
-})
+</script>
