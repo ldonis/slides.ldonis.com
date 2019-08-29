@@ -1,0 +1,68 @@
+---
+title: A.I. & Software Development
+layout: demo-code
+---
+%script{:src => "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"}
+%script{:src => "https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"}
+%script{:src => "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"}
+
+%main#app
+    %section
+        %input{"v-model" => "text"}
+        %button{"v-on:click" => "analyze"} analyze
+    %table
+        %tr{"v-for"=>"(prediction, index) in predictions"}
+            %td {{ prediction.label }}
+            %td {{ prediction.results[0].probabilities }}
+            %td {{ prediction.results }}
+
+:javascript
+
+    new Vue({
+        el: "#app",
+        data: {
+            text: "hello",
+            predictions: []
+        },
+        mounted() {
+            console.log('mounted')
+        },
+        methods: {
+
+            analyze() {
+
+                // The minimum prediction confidence.
+                const threshold = 0.9;
+
+                // Load the model. Users optionally pass in a threshold and an array of
+                // labels to include.
+                toxicity.load(threshold).then(model => {
+
+                    const sentences = [ this.text ];
+
+                    model.classify(sentences).then(predictions => {
+
+                        // `predictions` is an array of objects, one for each prediction head,
+                        // that contains the raw probabilities for each input along with the
+                        // final prediction in `match` (either `true` or `false`).
+                        // If neither prediction exceeds the threshold, `match` is `null`.
+
+                        this.predictions = predictions
+
+                    }).catch(error => {
+
+                        console.log(error)
+
+                    })
+
+                }).catch(error => {
+                    console.log(error)
+                })
+
+            }
+
+        }
+    })
+
+
+    
