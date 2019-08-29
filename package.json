@@ -6,10 +6,6 @@
     "license": "CC BY 4.0",
     "dependencies": {},
     "devDependencies": {
-        "leslicss": "git+https://github.com/LesliTech/LesliCSS.git#master"
-    },
-    "scripts": {
-        "build": "bundle exec middleman build",
-        "serve": "bundle exec middleman serve"
+        "lesli-css": "git+https://github.com/LesliTech/lesli-css.git#master"
     }
 }

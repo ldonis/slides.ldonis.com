@@ -1,89 +1,15 @@
 <!Doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>slides layout <%= current_page.data.title %> &bull; ldonis - slides for talks &amp; workshops</title>
-        <%= stylesheet_link_tag "slide" %>
-        <%= javascript_include_tag "site" %>
-    </head>
-    <body class="<%= page_classes %>">
-        <%= yield %>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92569549-3"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-92569549-3');
-        </script>
-        <script>
-
-            (() => {
-
-                if (location.hash != "#slide0") {
-                    location.href = "#slide0"
-                    location.reload()
-                    return
-                }
-
-                var slide = -1
-
-                let elements = []
-
-                // getting elements to navigate
-                let sections = document.getElementsByTagName("section")
-
-                // creating collection of navigable elements
-                for (var section of sections) {
-
-                    elements.push(section)
-
-                }
-
-                // adding identifier to slides
-                elements.map((element, index) => {
-
-                    let index_next = index + 1
-                    let index_prev = index - 1
-
-                    if (index_prev < 0) {
-                        index_prev = elements.length - 1
-                    }
-
-                    if (index_next == elements.length) {
-                        index_next = 0
-                    }
-
-                    element.setAttribute("id", "slide" + index)
-                    element.setAttribute("slide-next", "slide" + index_next)
-                    element.setAttribute("slide-prev", "slide" + index_prev)
-
-                })
-
-                document.onkeydown  = function (e) {
-
-                    let id = (location.hash).substring(1)
-                    let slide = document.getElementById(id)
-
-                    e = e || window.event;
-
-                    if(e.key == "ArrowDown" || e.key == "ArrowRight"){
-
-                        location.href = '#'+slide.attributes['slide-next'].value;
-
-                    }
-
-                    if(e.key == "ArrowUp" || e.key == "ArrowLeft"){
-
-                        location.href = '#'+slide.attributes['slide-prev'].value;
-
-                    }
-
-                }
-
-            })()
-            
-        </script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ldonis &bull; slides for talks &amp; workshops</title>
+    <%= stylesheet_link_tag "slides" %>
+    <%= javascript_include_tag "slides" %>
+</head>
+<body class="<%= page_classes %>">
+    <%= yield %>
+    <%= partial "partials/analytics" %>
+</body>
 </html>
