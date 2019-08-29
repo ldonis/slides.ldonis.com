@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
 
     if (location.hash != "#slide0") {
         location.href = "#slide0"
@@ -6,25 +6,23 @@ document.addEventListener('DOMContentLoaded', function(){
         return
     }
 
-    var slide = -1
-
-    let elements = []
+    var elements = []
 
     // getting elements to navigate
-    let sections = document.getElementsByTagName("section")
+    var sections = document.getElementsByTagName("section")
 
     // creating collection of navigable elements
-    for (var section of sections) {
+    for (var section in sections) {
 
         elements.push(section)
 
     }
 
     // adding identifier to slide elements (sections)
-    elements.map((element, index) => {
+    elements.map(function(element, index) {
 
-        let index_next = index + 1
-        let index_prev = index - 1
+        var index_next = index + 1
+        var index_prev = index - 1
 
         if (index_prev < 0) {
             index_prev = elements.length - 1
@@ -40,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     })
 
-    document.onkeydown = (e) => {
+    document.onkeydown = function(e) {
 
-        let id = (location.hash).substring(1)
-        let slide = document.getElementById(id)
+        var id = (location.hash).substring(1)
+        var slide = document.getElementById(id)
 
         e = e || window.event;
 
