@@ -16,8 +16,14 @@ header.index {
     height: 100vh;
 
     h1 {
+        margin: 0;
         font-size: 3.8rem;
         font-family: $font-family-ldonis;
+    }
+
+    hr {
+        height: 1px;
+        margin: 0 auto 10px;
     }
 
     p {
