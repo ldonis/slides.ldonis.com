@@ -15,6 +15,21 @@ layout: slide
 
     %section
         %h1 Que es la I. A.?
+        %hr
+        %p 1940 primera idea de construccion de cerebro electronico
+        %p 1956 se funda la primera institucion para la investigacion A. I.
+
+    %section
+        = image_tag 'slides/ai-and-software-development/kasparov-deepblue.jpg'
+
+    %section
+        = image_tag 'slides/ai-and-software-development/leesedol-alphago.jpg'
+
+    %section
+        %h1 Machine learning
+        %hr
+        %p neurona/perceptron
+        %p Red neuronal
 
     %section
         %h1 Como funciona?
@@ -27,6 +42,7 @@ layout: slide
 
     %section
         %h1 Que podemos hacer?
+        %hr
         %ul
             %li predictive analytics
             %li test automation
@@ -35,17 +51,31 @@ layout: slide
 
     %section
         %h1 Que podemos hacer? (advanced)
+        %hr
         %ul
             %li predictive actions
             %li data forecasting
             %li natural process language
             %li object recognition
+
     %section
         %h1 Herramientas
+        %hr
         %ul
             %li tensorflow
             %li tesseract
             %li brainjs
+
+    %section
+        %h1 Herramientas (advanced)
+        %hr
+        %ul
+            %li Firebase ML
+            %li Cloud TPU 
+
+    %section
+        %h1 Tensorflow
+        %hr
 
     %section 
         %h1 Demos
@@ -53,6 +83,10 @@ layout: slide
         %ul
             %li
                 = link_to 'Toxicity', '/demos/talks/ai-and-software-development/toxicity', target: '_blank'
+            %li
+                = link_to 'COCO ssd', '/demos/talks/ai-and-software-development/coco-ssd', target: '_blank'
+            %li
+                = link_to 'COCO ssd realtime', '/demos/talks/ai-and-software-development/coco-ssd-realtime', target: '_blank'
 
     %section
         = partial "partials/_questions"

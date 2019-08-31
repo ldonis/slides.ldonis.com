@@ -1,0 +1,34 @@
+/*
+* ldonis.com - Slides for talks & workshops
+*
+*
+* @author   Luis Donis <emc2@ldonis.com>
+* @license  
+* @version  1.0.0
+* @link     https://slides.ldonis.com
+*/
+
+
+// · Template
+// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
+@import 'template.scss';
+
+
+main {
+    @include lesli-flex-center('vertical');
+    text-align: center;
+    min-height: 100vh;
+    height: 100%;
+
+    section {
+        width: 90%;
+    }
+
+    pre.prettyprint {
+        border: none;
+        padding: 1rem;
+        font-size: 20px;
+        text-align: left;
+    }
+
+}

@@ -1,0 +1,93 @@
+---
+title: A.I. & Software Development
+layout: demo-code
+---
+%script{:src => "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"}
+%script{:src => "https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"}
+
+%main 
+    %h1 Object detection
+    %hr
+    %section
+        %pre.prettyprint
+            :preserve
+
+                // https://cdn.jsdelivr.net/npm/@tensorflow/tfjs
+                // https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd
+                // https://storage.googleapis.com/tfjs-models/savedmodel/ssdlite_mobilenet_v2/model.json
+
+                cocoSsd.load().then(model => {
+
+                    // detect objects in the image.
+                    model.detect(img).then(predictions => {
+
+                        predictions = {
+                            class = tipo de objeto / categoria
+                            score = porcentaje
+                        }
+
+                    }).catch(error => {
+                        console.log(error)
+                    });
+
+                }).catch(error => {
+                    consle.log(error)
+                });
+
+
+%main#app
+    %section
+        %div
+            %input#imgInp{:type => "file"}/
+        %div
+            %img{:id => "blah", :src => "#", :alt => "Test image", :width => "250px" }
+        %div
+            %p Predictions
+            %p
+                %span#classs
+                %span#score
+
+:javascript
+    
+    $("#imgInp").change(function(){
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+                
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        readURL(this);
+        const img = document.getElementById('blah');
+
+        jQuery("#classs").text("")
+        jQuery("#score").text("")
+
+        // Load the model.
+        cocoSsd.load().then(model => {
+
+            // detect objects in the image.
+            model.detect(img).then(predictions => {
+
+                console.log(predictions)
+
+                jQuery("#classs").text(predictions[0].class)
+                jQuery("#score").text(predictions[0].score)
+
+            }).catch(error => {
+                console.log(error)
+            });
+
+        }).catch(error => {
+            consle.log(error)
+        });
+
+        
+    });
