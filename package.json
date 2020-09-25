@@ -4,8 +4,8 @@
     "homepage": "https://slides.ldonis.com",
     "author": "Luis Donis <emc2@ldonis.com>",
     "license": "CC BY 4.0",
-    "dependencies": {},
-    "devDependencies": {
-        "lesli-css": "git+https://github.com/LesliTech/lesli-css.git#master"
-    }
+    "dependencies": {
+        "lesli-css": "0.7.5"
+    },
+    "devDependencies": {}
 }

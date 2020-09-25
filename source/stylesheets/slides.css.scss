@@ -86,7 +86,7 @@ html {
 
         article {
             background-color: rgba(255, 255, 255, .7);
-            @include lesli-flex-center('vertical');
+            @include lesli-css-flex-center("true");
             height: 100vh;
             width: 100%;
             z-index: 999;
@@ -143,7 +143,7 @@ html {
 
     // slide transition
     [id^=slide] {
-        @include lesli-flex-center('vertical');
+        @include lesli-css-flex-center("true");
         transition: transform 1s, opacity 0.8s;
         transform: rotate(90deg);
         transform-origin: 0 0;
@@ -176,3 +176,4 @@ html {
 @import 'slides/cloud-iot.scss';
 @import 'slides/software-development-roadmap.scss';
 @import 'slides/ai-and-software-development.scss';
+@import 'slides/full-stack-javascript.scss';

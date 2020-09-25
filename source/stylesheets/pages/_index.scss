@@ -11,7 +11,7 @@
 // · Header
 // · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 header.index {
-    @include lesli-flex-center('vertical');
+    @include lesli-css-flex-center("true");
     text-align: center;
     height: 100vh;
 

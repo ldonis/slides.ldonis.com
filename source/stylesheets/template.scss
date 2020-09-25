@@ -10,37 +10,23 @@
 
 
 // · Including Lesli CSS
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-@import '../../node_modules/leslicss/lesli';
+@import '../../node_modules/lesli-css/lesli';
 
 
 // · Including variables
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
 @import 'variables.scss';
 
 
 // · Fonts
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-// · https://fonts.google.com/specimen/Pinyon+Script?selection.family=Montserrat:300,400|Pinyon+Script
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Pinyon+Script');
 
 
 // · Global dom styles
-// · ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~     ~·~
-@include lesli-base();
-
-* {
-    outline: none;
-    color: $color-black;
-    font-family: $font-family-body;
-    font-weight: $font-weight-normal;
-}
+@include lesli-css-normalize();
+@include lesli-css-fonts-standard();
 
 html,
 body {
-    color: $color-black;
-    font-family: $font-family-body;
-    font-weight: $font-weight-normal;
     font-size: 16px;
 }
 
