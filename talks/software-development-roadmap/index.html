@@ -1,0 +1,244 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ldonis &bull; slides for talks &amp; workshops</title>
+    <link href="/stylesheets/slides.css" rel="stylesheet" />
+</head>
+<body class="talks talks_software-development-roadmap talks_software-development-roadmap_index">
+    <main class="slides">
+
+    <section>
+        <img src="/images/slides/software-development-roadmap/software-development-roadmap.png" alt="" />
+        <h1>Software Development</h1>
+        <hr />
+        <h2>An Unexpected Journey</h2>
+    </section>
+
+    <section>
+        <img alt="ldonis logo" src="https://cdn.lesli.tech/ldonis/brand/logo/ldonis_isotipo.svg">
+<h1>Luis Donis</h1>
+<hr>
+<h2>Entrepreneur, dreamer, software developer with +10 years of experience</h2>
+<h3>I love books, science fiction movies and horror stories.</h3>
+
+    </section>
+
+    <section class="video-bg"> 
+        <article>
+            <h1>Agenda</h1>
+            <hr />
+            <p></p>
+            <p>Protocols</p>
+            <p>Database</p>
+            <p>Backend</p>
+            <p>Frontend</p>
+            <p>Mobile</p>
+        </article>
+        <video width="400" autoplay loop>
+            <source src="/videos/to-start-press-any-key.mp4" type="video/mp4">
+        </video> 
+    </section>
+
+    <section>
+        <article>
+            <h1>Best to have:</h1>
+            <hr>
+            <p>Solve problems</p>
+            <p>Curiosity</p>
+            <p>Always learning</p>
+            <p>Love for books</p>
+        </article>
+        <img src="/images/gifs/project-i-never-wanted.gif" class="gif-bg" alt="" />
+    </section>
+
+    <section class="video-bg"> 
+        <img src="/images/mms/unit-tests-everywhere.jpg" alt="" />
+    </section>
+
+    <section>
+        <img src="/images/mms/in-case-of-fire-git-commit.jpg" class="gif-bg" alt="" />
+    </section>
+
+    <section>
+        <article>
+            <h1>Linux</h1>
+        </article>
+        <img src="/images/gifs/watching.gif" class="gif-bg" alt="" />
+    </section>
+
+    <section class="video-bg"> 
+        <article>
+            <h1>English</h1>
+        </article>
+        <img src="/images/gifs/working-on-bored-project.gif" class="gif-bg" alt="" />
+    </section>
+
+    <section class="video-bg"> 
+        <article>
+            <h1>Development methodologies</h1>
+            <hr>
+            <p>Agile development</p>
+            <p>Waterfall</p>
+            <p>Extreme programming</p>
+        </article>
+        <img src="/images/gifs/intern-coding.gif" class="gif-bg" alt="" />
+    </section>
+
+    <section>
+        <h1>Protocols</h1>
+        <hr>
+        <p>http &bull; mqtt &bull; ws &bull; ssh</p>
+    </section>
+
+    <section>
+        <img src="/images/slides/software-development-roadmap/database.map.svg" alt="" />
+    </section>
+
+    <section>
+        <img src="/images/slides/software-development-roadmap/backend.map.svg" alt="" />
+    </section>
+
+    <section>
+        <img src="/images/slides/software-development-roadmap/frontend.map.svg" alt="" />
+    </section>
+
+    <section>
+        <img src="/images/slides/software-development-roadmap/mobile.map.svg" alt="" />
+    </section>
+
+<section class="video-bg"> 
+        <article>
+            <h1>Development practices</h1>
+            <hr>
+            <p>Continuous integration</p>
+            <p>Continuous delivery</p>
+        </article>
+        <img src="/images/gifs/continuous-delivery.gif" class="gif-bg" alt="" />
+    </section>
+
+    <section>
+        <article>
+            <h1>Now you have the power</h1>
+        </article>
+        <img src="/images/gifs/power.gif" class="gif-bg" alt="" />
+    </section>
+
+    <section>
+        <img src="/images/gifs/money.gif" class="gif-bg" alt="" />
+    </section>
+
+    <section>
+        <img src="/images/questions.png" alt="" />
+
+    </section>
+
+    <section>
+        <h1>¡Gracias!</h1>
+<hr>
+<div class="socialmedia">
+    <a>github.com/ldonis</a>
+    <a>emc2@ldonis.com</a>
+</div>
+
+    </section>
+
+</main>
+
+    <script>
+
+(() => {
+    if (location.hash != "#slide0") {
+        location.href = "#slide0"
+        location.reload()
+        return
+    }
+
+    var slide = -1
+    let elements = []
+    
+    // getting elements to navigate
+    let sections = document.getElementsByTagName("section")
+    
+    // creating collection of navigable elements
+    for (var section of sections) {
+        elements.push(section)
+    }
+    
+    // adding identifier to slides
+    elements.map((element, index) => {
+
+        let index_next = index + 1
+        let index_prev = index - 1
+
+        if (index_prev < 0) {
+            index_prev = elements.length - 1
+        }
+
+        if (index_next == elements.length) {
+            index_next = 0
+        }
+
+        element.setAttribute("id", "slide" + index)
+        element.setAttribute("slide-next", "slide" + index_next)
+        element.setAttribute("slide-prev", "slide" + index_prev)
+        
+    })
+
+    document.onkeydown  = function (e) {
+
+        let id = (location.hash).substring(1)
+        let slide = document.getElementById(id)
+
+        e = e || window.event;
+
+        if(e.key == "ArrowDown" || e.key == "ArrowRight"){
+
+            location.href = '#'+slide.attributes['slide-next'].value;
+
+        }
+
+        if(e.key == "ArrowUp" || e.key == "ArrowLeft"){
+
+            location.href = '#'+slide.attributes['slide-prev'].value;
+
+        }
+
+    }
+
+})()
+
+</script>
+
+    <!-- Matomo -->
+<script type="text/javascript">
+
+    var _paq = window._paq = window._paq || [];
+
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+
+    (function() {
+        var u="//analytics.lesli.tech/";
+
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '6']);
+
+        var d=document, 
+            g=d.createElement('script'), 
+            s=d.getElementsByTagName('script')[0];
+
+            g.type='text/javascript'; 
+            g.async=true; 
+            g.src=u+'matomo.js'; 
+            s.parentNode.insertBefore(g,s);
+
+    })();
+</script>
+<!-- End Matomo Code -->
+
+</body>
+</html>

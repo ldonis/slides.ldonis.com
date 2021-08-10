@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <main id="vue-app" class="container p-6 mv-6">
+        <input type="text" class="input" v-model="nombre">
+        <p>{{ nombre }}</p>
+    </main>
+    <script>
+        new Vue({
+            data: {
+                nombre: "Luis"
+            },
+            el: "#vue-app"
+        })
+    </script>
+</body>
+</html>

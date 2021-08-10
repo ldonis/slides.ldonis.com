@@ -1,0 +1,112 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ldonis &bull; slides for talks &amp; workshops</title>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="/stylesheets/demo-code.css" rel="stylesheet" />
+</head>
+<body class="demos demos_talks demos_talks_ai-and-software-development demos_talks_ai-and-software-development_toxicity demos_talks_ai-and-software-development_toxicity_index">
+    <script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs'></script>
+<script src='https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity'></script>
+<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>
+<main>
+<h1>Toxicity analyzer</h1>
+<hr>
+<section>
+<pre class='prettyprint'>// https://cdn.jsdelivr.net/npm/@tensorflow/tfjs&#x000A;// https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity&#x000A;// https://storage.googleapis.com/tfjs-models/savedmodel/toxicity/model.json&#x000A;&#x000A;new Vue({&#x000A;    el: "#app",&#x000A;    data: {&#x000A;        text: "hello",&#x000A;        predictions: []&#x000A;    },&#x000A;    mounted() {&#x000A;        console.log('mounted')&#x000A;    },&#x000A;    methods: {&#x000A;&#x000A;        analyze() {&#x000A;&#x000A;            // The minimum prediction confidence.&#x000A;            const threshold = 0.9;&#x000A;&#x000A;            // Load the model. Users optionally pass in a threshold and an array of&#x000A;            // labels to include.&#x000A;            toxicity.load(threshold).then(model => {&#x000A;&#x000A;                const sentences = [ this.text ];&#x000A;&#x000A;                model.classify(sentences).then(predictions => {&#x000A;&#x000A;                    // `predictions` is an array of objects, one for each prediction head,&#x000A;                    // that contains the raw probabilities for each input along with the&#x000A;                    // final prediction in `match` (either `true` or `false`).&#x000A;                    // If neither prediction exceeds the threshold, `match` is `null`.&#x000A;&#x000A;                    this.predictions = predictions&#x000A;&#x000A;                }).catch(error => {&#x000A;&#x000A;                    console.log(error)&#x000A;&#x000A;                })&#x000A;&#x000A;            }).catch(error => {&#x000A;                console.log(error)&#x000A;            })&#x000A;&#x000A;        }&#x000A;&#x000A;    }&#x000A;})&#x000A;</pre>
+</section>
+</main>
+<main id='app'>
+<section>
+<input v-model='text'>
+<button v-on:click='analyze'>analyze</button>
+</section>
+<table>
+<tr v-for='(prediction, index) in predictions'>
+<td>{{ prediction.label }}</td>
+<td>{{ prediction.results[0].probabilities }}</td>
+<td>{{ prediction.results }}</td>
+</tr>
+</table>
+</main>
+<script>
+  new Vue({
+      el: "#app",
+      data: {
+          text: "hello",
+          predictions: []
+      },
+      mounted() {
+          console.log('mounted')
+      },
+      methods: {
+  
+          analyze() {
+  
+              // The minimum prediction confidence.
+              const threshold = 0.9;
+  
+              // Load the model. Users optionally pass in a threshold and an array of
+              // labels to include.
+              toxicity.load(threshold).then(model => {
+  
+                  const sentences = [ this.text ];
+  
+                  model.classify(sentences).then(predictions => {
+  
+                      // `predictions` is an array of objects, one for each prediction head,
+                      // that contains the raw probabilities for each input along with the
+                      // final prediction in `match` (either `true` or `false`).
+                      // If neither prediction exceeds the threshold, `match` is `null`.
+  
+                      this.predictions = predictions
+  
+                  }).catch(error => {
+  
+                      console.log(error)
+  
+                  })
+  
+              }).catch(error => {
+                  console.log(error)
+              })
+  
+          }
+  
+      }
+  })
+</script>
+
+    <!-- Matomo -->
+<script type="text/javascript">
+
+    var _paq = window._paq = window._paq || [];
+
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+
+    (function() {
+        var u="//analytics.lesli.tech/";
+
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '6']);
+
+        var d=document, 
+            g=d.createElement('script'), 
+            s=d.getElementsByTagName('script')[0];
+
+            g.type='text/javascript'; 
+            g.async=true; 
+            g.src=u+'matomo.js'; 
+            s.parentNode.insertBefore(g,s);
+
+    })();
+</script>
+<!-- End Matomo Code -->
+
+</body>
+</html>

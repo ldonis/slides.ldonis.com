@@ -1,0 +1,113 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ldonis &bull; slides for talks &amp; workshops</title>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link href="/stylesheets/demo-code.css" rel="stylesheet" />
+</head>
+<body class="demos demos_talks demos_talks_ai-and-software-development demos_talks_ai-and-software-development_coco-ssd demos_talks_ai-and-software-development_coco-ssd_index">
+    <script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs'></script>
+<script src='https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js'></script>
+<main>
+<h1>Object detection</h1>
+<hr>
+<section>
+<pre class='prettyprint'>// https://cdn.jsdelivr.net/npm/@tensorflow/tfjs&#x000A;// https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd&#x000A;// https://storage.googleapis.com/tfjs-models/savedmodel/ssdlite_mobilenet_v2/model.json&#x000A;&#x000A;cocoSsd.load().then(model => {&#x000A;&#x000A;    // detect objects in the image.&#x000A;    model.detect(img).then(predictions => {&#x000A;&#x000A;        predictions = {&#x000A;            class = tipo de objeto / categoria&#x000A;            score = porcentaje&#x000A;        }&#x000A;&#x000A;    }).catch(error => {&#x000A;        console.log(error)&#x000A;    });&#x000A;&#x000A;}).catch(error => {&#x000A;    consle.log(error)&#x000A;});&#x000A;&#x000A;</pre>
+</section>
+</main>
+<main id='app'>
+<section>
+<div>
+<input id='imgInp' type='file'>
+</div>
+<div>
+<img alt='Test image' id='blah' src='#' width='250px'>
+</div>
+<div>
+<p>Predictions</p>
+<p>
+<span id='classs'></span>
+<span id='score'></span>
+</p>
+</div>
+</section>
+</main>
+<script>
+  
+  $("#imgInp").change(function(){
+  
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              
+              reader.onload = function (e) {
+                  $('#blah').attr('src', e.target.result);
+              }
+              
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+  
+      readURL(this);
+      const img = document.getElementById('blah');
+  
+      jQuery("#classs").text("")
+      jQuery("#score").text("")
+  
+      // Load the model.
+      cocoSsd.load().then(model => {
+  
+          // detect objects in the image.
+          model.detect(img).then(predictions => {
+  
+              console.log(predictions)
+  
+              jQuery("#classs").text(predictions[0].class)
+              jQuery("#score").text(predictions[0].score)
+  
+          }).catch(error => {
+              console.log(error)
+          });
+  
+      }).catch(error => {
+          consle.log(error)
+      });
+  
+      
+  });
+</script>
+
+    <!-- Matomo -->
+<script type="text/javascript">
+
+    var _paq = window._paq = window._paq || [];
+
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+
+    (function() {
+        var u="//analytics.lesli.tech/";
+
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '6']);
+
+        var d=document, 
+            g=d.createElement('script'), 
+            s=d.getElementsByTagName('script')[0];
+
+            g.type='text/javascript'; 
+            g.async=true; 
+            g.src=u+'matomo.js'; 
+            s.parentNode.insertBefore(g,s);
+
+    })();
+</script>
+<!-- End Matomo Code -->
+
+</body>
+</html>
